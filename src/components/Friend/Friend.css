@@ -1,0 +1,10 @@
+.friend-card {
+  padding: 20px;
+  margin: 20px 10px;
+  background: rgb(217, 209, 209);
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.friend-card:hover {
+  background: rgb(217, 150, 150);
+}
