@@ -35,6 +35,7 @@ function App() {
           of them to render at a time
         */}
           <Routes>
+            <Route exact path="/" element={<Home />}></Route>
             <Route path="/home" element={<Home />}>
 
             </Route>
