@@ -4,10 +4,16 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Friends from './components/Friends/Friends';
 import NotFound from './components/NotFound/NotFound';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, Link, Route, Routes } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 function App() {
+  let activeStyle = {
+    textDecoration: "underline",
+    fontWeight: "bold"
+  };
+
+  let activeClassName = "underline";
   return (
     <div className="App">
       <BrowserRouter>
@@ -21,6 +27,27 @@ function App() {
             </li>
             <li>
               <Link to="/friends">Friends</Link>
+            </li>
+
+          </ul>
+
+          <hr />
+
+          <ul>
+            <li>
+              <NavLink to="/home" style={({ isActive }) =>
+                isActive ? activeStyle : undefined
+              }>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" style={({ isActive }) =>
+                isActive ? activeStyle : undefined
+              }>About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/friends" style={({ isActive }) =>
+                isActive ? activeStyle : undefined
+              }>Friends</NavLink>
             </li>
 
           </ul>
